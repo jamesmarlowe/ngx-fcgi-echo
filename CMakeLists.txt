@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 2.8)
-project(fcgiexample)
+project(fcgiecho)
 
 add_definitions("-Wno-deprecated-declarations")
 
@@ -15,6 +15,6 @@ set(fcgi_echo_sources
     fcgi-echo.cpp
 )
 
-add_executable(fcgi_echo ${fcgi_example_sources})
+add_executable(fcgi_echo ${fcgi_echo_sources})
 
-target_link_libraries(fcgi_echo fcgi)
+target_link_libraries(fcgi_echo fcgi++ fcgi)
