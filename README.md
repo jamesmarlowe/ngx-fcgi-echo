@@ -29,11 +29,11 @@ Trying
 ------
 simply POST to localhost/ with a post body to see it echoed
 ```
-curl -X POST -d 'test' localhost/
+curl -X POST -d 'test' localhost/uri
 ```
 Which should give you
 ```
-test
+test from /uri
 ```
 
 Notes

@@ -68,7 +68,7 @@ int main(void) {
 
         cout << "Content-type: text/html\r\n"
              << "\r\n"
-             << content << " from " << uri;
+             << content << " from " << uri << "\n";
     }
 
     // restore stdio streambufs
