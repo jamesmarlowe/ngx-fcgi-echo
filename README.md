@@ -33,7 +33,7 @@ curl -X POST -d 'test' localhost/uri
 ```
 Which should give you
 ```
-test from /uri
+test from localhost/uri
 ```
 
 Notes

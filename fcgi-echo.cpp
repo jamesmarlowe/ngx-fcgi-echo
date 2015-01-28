@@ -58,6 +58,7 @@ int main(void) {
         cout.rdbuf(&cout_fcgi_streambuf);
         cerr.rdbuf(&cerr_fcgi_streambuf);
 
+        const char * host = FCGX_GetParam("HOST_NAME", request.envp);
         const char * uri = FCGX_GetParam("REQUEST_URI", request.envp);
 
         string content = get_request_content(request);
@@ -68,7 +69,7 @@ int main(void) {
 
         cout << "Content-type: text/html\r\n"
              << "\r\n"
-             << content << " from " << uri << "\n";
+             << content << " from " << host << uri << "\n";
     }
 
     // restore stdio streambufs
